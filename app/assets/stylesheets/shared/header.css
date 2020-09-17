@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 7vw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(182, 235, 217, 0.932);
+}
+
+.search-bar-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foodselection {
+  font-size: 35px;
+  margin-right: 10vw;
+  color: #333333;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.category-list {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.user-nickname {
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logout {
+  color: #333333;
+  text-decoration: none;
+}
+
+.login {
+  margin-right: 3vw;
+  color: #333333;
+  text-decoration: none;
+}
+
+.sign-up {
+  color: #333333;
+  text-decoration: none;
+}
