@@ -36,4 +36,5 @@ Allergy.first_or_create([
 { id: 27, name: 'りんご'},
 { id: 28, name: 'ゼラチン'},
 { id: 29, name: 'その他'},
+{ id: 30, name: '無し'},
 ])
