@@ -1,0 +1,29 @@
+<%= render "shared/header" %>
+<div class='main'>
+
+  <div class = 'title-contents'>
+    <h2 class = 'service-title'>
+      アレルギーっ子のための食品サイト
+    </h2>
+    <p class='service-explain'>
+      食物アレルギーの人に参考にして欲しいサイトです
+    </p>
+  </div>
+
+  <div class = 'important'>
+    アレルギーは個人差が大きいので全ての方に対応している訳ではありません。ご自分の状態に合わせてお使いください。一切の責任は負いません。
+  </div>
+
+  <div class='item-contents'>
+    <h2 class='title'>食品紹介</h2>
+    <%= link_to '新規投稿商品', '#', class: "subtitle" %>
+    <ul class='item-lists'>
+      <%# <% if @items.present? %>
+        <%# <%= render partial: 'item', collection: @items %>
+      <%# <% end %>
+    </ul>
+  </div>
+  <div class = 'text-in'>
+    <%= link_to '投稿する', '#', class: "text-in-page"%>
+  </div>
+</div>
