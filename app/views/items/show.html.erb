@@ -1,0 +1,71 @@
+<%= render "shared/header" %>
+
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @item.name %>
+    </h2>
+    <div class='item-img-content'>
+      <%= image_tag @item.image ,class:"item-box-img" %>
+    </div>
+
+    <% if user_signed_in? && current_user.id == @item.user.id %>
+      <%= link_to '商品の編集', edit_item_path(@item.id), method: :get, class: "item-red-btn" %>
+      <p class='or-text'>or</p>
+      <%= link_to '削除', item_path(@item.id), method: :delete, class:'item-destroy' %>
+    <% end %>
+
+    <div class="item-explain-box">
+      <span><%= @item.text %></span>
+    </div>
+    <div class="detail-item">紹介者</div>
+    <div class="detail-value"><%= @item.user.nickname %></div>
+    <div class="allergies">
+      <% @item.allergies.each do |allergy| %>
+        <div class="allergy">
+          <div class="allergy-name">
+            <%= allergy.name%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+  <%# <div class="comment-box">
+    <% if current_user %> 
+      <%# <%= form_with model: [@item,@comment] do |f| %>
+        <%# <%= f.text_area :text, class:"comment-text", rows: "3", maxlength:"88"%>
+        <%# <p class="comment-warn"> %>
+          <%# 相手のことを考え丁寧なコメントを心がけましょう。
+          <br>
+          不快な言葉遣いなどは利用制限や退会処分となることがあります。 %>
+        <%# </p>
+        <%=f.submit class:"comment-btn" do %>
+          <%# <%= class:"comment-flag-icon" ,width:"20",height:"25"%>
+          <%# <span>コメントする<span> %>
+        <%# <% end %>
+      <%# <% end %>
+    <%# <% else %>
+      <%# <h1> コメントの投稿には新規登録/ログインが必要です </h1>
+    <% end %> 
+    <%# ＜コメント一覧＞
+    <div id="comments">
+      <% if @comments %>
+        <%# <% @comments.each do |comment| %>
+          <%# <p> 
+            <strong><%= comment.user.nickname %>
+            <%# <%= comment.text %> 
+          <%# </p> 
+        <% end %>
+      <%# <% end %>
+    <%# </div> %>
+  <%# </div> %>
+  <div class="links">
+    <a href="#" class="change-item-btn">
+      ＜ 前の商品
+    </a>
+    <a href="#" class="change-item-btn">
+      後ろの商品 ＞
+    </a>
+  </div>
+  <a href="#" class='another-item'><%= "商品のカテゴリー名" %>をもっと見る</a>
+</div>
