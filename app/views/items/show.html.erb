@@ -18,8 +18,17 @@
     <div class="item-explain-box">
       <span><%= @item.text %></span>
     </div>
-    <div class="detail-item">出品者</div>
+    <div class="detail-item">紹介者</div>
     <div class="detail-value"><%= @item.user.nickname %></div>
+    <div class="allergies">
+      <% @item.allergies.each do |allergy| %>
+        <div class="allergy">
+          <div class="allergy-name">
+            <%= allergy.name%>
+          </div>
+        </div>
+      <% end %>
+    </div>
 
   <%# <div class="comment-box">
     <% if current_user %> 
