@@ -1,8 +1,8 @@
 <div class="items-sell-contents">
   <header class="items-sell-header">
-    
-
+    <%= link_to 'Food Selection', root_path, class:"items-sell-title"%>
   </header>
+
   <div class="items-sell-main">
     <h2 class="items-sell-title">商品の情報を入力</h2>
     <%= form_with model: @item, local: true do |f| %>
@@ -36,7 +36,7 @@
       </div>
       <% Allergy.all.each do |allergy| %>
         <%= f.check_box :allergy_ids, { multiple: true, checked: @item.allergies.find_by(id: allergy.id).present?, include_hidden: false }, allergy[:id] %>
-        <label class='badge badge-secondary'><%= allergy.name %></label>
+        <label><%= allergy.name %></label>
       <% end %>
     </div>
     <div class="sell-btn-contents">
@@ -46,3 +46,4 @@
   </div>
   <% end %>
 </div>
+<%= render "shared/footer"%>
