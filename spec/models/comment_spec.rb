@@ -10,7 +10,7 @@ RSpec.describe Comment, type: :model do
       expect(@comment).to be_valid
     end
     it '保存できないとき' do
-      @comment.text = ""
+      @comment.text = ''
       @comment.valid?
       expect(@comment.errors.full_messages).to include("Text can't be blank")
     end
