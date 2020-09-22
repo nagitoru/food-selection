@@ -1,0 +1,13 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+       first_name: 苗字
+       last_name: 名前
+       birthday: 誕生日
+     item:
+       image: 画像
+       name: 商品名
+       text: 商品の説明
+       allergy_ids: 商品のアレルギー
