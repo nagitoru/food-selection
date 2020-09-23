@@ -1,9 +1,14 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :limit]
   before_action :set_item, only: [:show, :destroy, :edit, :update]
 
   def index
     @items = Item.includes(:user).order('created_at DESC')
+  end
+
+  def limit
+    @items = Item.where(item.allergies.id < 8)
+    render json: { post: @items }
   end
 
   def new
