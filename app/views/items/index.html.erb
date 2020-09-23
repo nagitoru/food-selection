@@ -16,7 +16,8 @@
   <div class='item-contents'>
     <h2 class='title'>食品紹介</h2>
     <%= link_to '新規投稿商品', '#', class: "subtitle" %>
-    <ul class='item-lists'>
+    <div class='item-limit' id="item-limit">主要７品目はこちら</div>
+    <ul class='item-lists' id="item-limit-list">
       <% if @items.present? %>
         <%= render partial: 'item', collection: @items %>
       <% end %>
