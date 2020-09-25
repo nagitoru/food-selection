@@ -7,8 +7,7 @@ class ItemsController < ApplicationController
   end
 
   def limit
-    @items = Item.where(item.allergies.id < 8)
-    render json: { post: @items }
+    @items = Item.includes(:allergies).where("allergies.id":1..7)
   end
 
   def new
