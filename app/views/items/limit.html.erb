@@ -1,0 +1,26 @@
+<%= render "shared/header" %>
+<div class='main'>
+<div class='item-contents'>
+    <h2 class='title'>食品（アレルギー主要7品目を含む）</h2>
+    <ul class='item-lists'>
+      <% @items.each do |item| %>
+        <li class='list'>
+          <%= link_to item_path(item.id) do %>
+            <div class='item-img-content'>
+              <%= image_tag item.image, class: "item-img" %>
+              <div class='item-info'>
+              <h3 class='item-name'>
+                <%= item.name %>
+              </h3>
+              </div>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class = 'text-in'>
+    <%= link_to '投稿する', new_item_path, class: "text-in-page"%>
+  </div>
+</div>
+<%= render "shared/footer"%>
