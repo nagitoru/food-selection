@@ -22,6 +22,7 @@
         <%= render partial: 'item', collection: @items %>
       <% end %>
     </ul>
+    <%= paginate @items %>
   </div>
   <div class = 'text-in'>
     <%= link_to '投稿する', new_item_path, class: "text-in-page"%>
