@@ -73,17 +73,17 @@
 ### 食品のアレルギーを複数選択することのできる機能
 食品を紹介する時に、アレルギー表示の欄で複数のチェックをすることができます。
 実装した理由としては一つの食品に一つのアレルギーだけということが少ないからです。
-![複数選択機能](https://gyazo.com/2abf319bc34dc6fceccfe8c9a2afcc19)
+[![Image from Gyazo](https://i.gyazo.com/2abf319bc34dc6fceccfe8c9a2afcc19.png)](https://gyazo.com/2abf319bc34dc6fceccfe8c9a2afcc19)
 
 ### アレルギー主要7品目のみが表示される機能
 アレルギーの主要7品目に該当する商品のみの表示に切り替わることができます。
 実装した理由としては、主要7品目のアレルギーの人がたくさんいるため
-![取得制限機能](https://gyazo.com/0af09a1411fc5064a14ea99f6644b517)
+[![Image from Gyazo](https://i.gyazo.com/0af09a1411fc5064a14ea99f6644b517.png)](https://gyazo.com/0af09a1411fc5064a14ea99f6644b517)
 
 ---
 
 ## データベース設計
-![ER図](https://gyazo.com/0d2ca7d2397338f183e186cc68a5e4a9)
+[![Image from Gyazo](https://i.gyazo.com/0d2ca7d2397338f183e186cc68a5e4a9.png)](https://gyazo.com/0d2ca7d2397338f183e186cc68a5e4a9)
 
 ---
 
